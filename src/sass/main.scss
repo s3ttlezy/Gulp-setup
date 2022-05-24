@@ -1,0 +1,25 @@
+$base-font-size: 24px;
+
+@mixin ph {
+   @media (max-width: 700px) {
+      @content;
+   }
+}
+
+* {
+   box-sizing: border-box;
+}
+body {
+   font-size: $base-font-size;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   line-height: 1.5;
+   background: url("../img/saber.png") 99.4% 56.7% / 500px no-repeat ;
+
+   @include ph {
+      color: #fff;
+      background-color: #000;
+   }
+}
+
+
+@import "./block/*.scss"
